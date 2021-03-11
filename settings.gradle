@@ -1,0 +1,3 @@
+include ':awssignature'
+include ':app'
+rootProject.name = "AwsSignature"
