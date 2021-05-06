@@ -23,12 +23,12 @@ object Signature {
     private val useCase: CognitoUseCase = CognitoUseCase()
 
     @Synchronized
-    fun setApplication(app: Application) {
+    fun setApplication(app: Application, urlAWS: String) {
         koinApplication = koinApplication {
             androidContext(app.applicationContext)
             modules(
                 listOf(
-                    retrofitModule,
+                    retrofitModule(urlAWS),
                     networkModule,
                     useCaseModule
                 )

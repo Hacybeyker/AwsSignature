@@ -26,7 +26,7 @@ class ApplicationBase : Application() {
     override fun onCreate() {
         super.onCreate()
         ...
-        Signature.setApplication(this)
+        Signature.setApplication(this, "YOUR_BASE_URL_AWS")
     }
 }
 ```
