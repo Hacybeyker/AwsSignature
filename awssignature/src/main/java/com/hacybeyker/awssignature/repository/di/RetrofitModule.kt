@@ -11,10 +11,10 @@ import java.util.concurrent.TimeUnit
  * Created by Carlos Osorio on 11/03/2021
  */
 
-val retrofitModule = module {
+fun retrofitModule(urlAWS: String) = module {
     single { providerGsonConverterFactory() }
     single { providerOkHttpClient() }
-    single { providerRetrofit("https://cognito-identity.us-east-2.amazonaws.com", get(), get()) }
+    single { providerRetrofit(urlAWS, get(), get()) }
     single { providerCognitoServices(get()) }
 }
 

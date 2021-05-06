@@ -9,6 +9,6 @@ import android.app.Application
 class ApplicationBase : Application() {
     override fun onCreate() {
         super.onCreate()
-        Signature.setApplication(this)
+        Signature.setApplication(this, "https://cognito-identity.us-east-2.amazonaws.com")
     }
 }
